@@ -1,0 +1,21 @@
+<div class="container page-content">
+  <div class="row">
+    <div class="col-sm-12 col-md">
+      <!-- <ngx-timeline [events]="events"> -->
+        <ng-template let-event let-index="rowIndex" timelineBody>
+          <div>{{event.body}}</div>
+          <div class="button-row">
+            <!-- <button type="button" class="btn btn-primary" (click)="editEvent(index, eventmodal)"><i class="fa fa-edit"></i></button>
+            <button type="button" class="btn btn-danger" (click)="deleteEvent(index)"><i class="fa fa-trash"></i></button> -->
+          </div>
+        </ng-template>
+      <!-- </ngx-timeline> -->
+    </div>
+    <div class="col-md-2">
+      <!-- <button type="button" class="btn btn-primary" (click)="addEvent(eventmodal)"><i class="fa fa-plus"></i> Add</button> -->
+    </div>
+  </div>
+</div>
+<div *ngFor="let event of events">
+  {{event.name}}
+</div>

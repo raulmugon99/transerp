@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content class="ion-padding">
+    <table datatable class="row-border hover" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Razon Social</th>
+          <th>Telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of clientes">
+          <td>{{p.idCliente}}</td>
+          <td>{{p.nombre}}</td>
+          <td>{{p.razonSocial}}</td>
+          <td>{{p.telefono}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ion-button (click)="test()"></ion-button>
+  </ion-content>
+</ion-content>

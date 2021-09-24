@@ -1,0 +1,7 @@
+{
+  "name": "transerp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

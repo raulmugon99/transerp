@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+<ion-input #nombre value="raul@gmail.com">
+
+</ion-input>
+<ion-input #password type="password" value="123456">
+
+</ion-input>
+<ion-button (click)="test(nombre.value, password.value)">login</ion-button>
+</ion-content>

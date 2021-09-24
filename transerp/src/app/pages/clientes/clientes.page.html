@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-item *ngFor="let item of clientes" (click)="openModal(item.id)">
+    {{item.nombre}}
+  </ion-item>
+
+<!-- <ion-button (click)="openModal()"></ion-button> -->
+</ion-content>

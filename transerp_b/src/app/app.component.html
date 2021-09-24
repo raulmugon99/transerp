@@ -1,0 +1,56 @@
+
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Inbox</ion-list-header>
+          <ion-note>hi@ionicframework.com</ion-note>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <!-- <button class="btn btn-primary" *ngIf="!loginService.isAuthenticated" (click)="loginService.login()"> Login </button>
+        <button class="btn btn-primary" *ngIf="loginService.isAuthenticated" (click)="loginService.logout()"> Logout </button> -->
+        <a class="nav-link" [routerLink]="['clientes']">adsasd</a>
+        <!-- <ion-list id="labels-list">
+          <ion-list-header>Labels</ion-list-header>
+
+          <ion-item *ngFor="let label of labels" lines="none">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+          </ion-item>
+        </ion-list> -->
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+
+
+<!-- <nav class="navbar navbar-expand navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['']">
+    <i class="fa fa-clock-o"></i>
+  </a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['']">
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['timeline']">
+        Timeline
+      </a>
+    </li>
+  </ul>
+  <span>
+    <button class="btn btn-primary" *ngIf="!loginService.isAuthenticated" (click)="loginService.login()"> Login </button>
+    <button class="btn btn-primary" *ngIf="loginService.isAuthenticated" (click)="loginService.logout()"> Logout </button>
+  </span>
+</nav>
+<router-outlet></router-outlet> -->
